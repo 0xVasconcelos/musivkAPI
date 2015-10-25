@@ -4,7 +4,7 @@
   "description": "API from Musivk app",
   "main": "app.js",
   "scripts": {
-    "test": "node app.js"
+    "test": "node app.js travisci"
   },
   "repository": {
     "type": "git",
