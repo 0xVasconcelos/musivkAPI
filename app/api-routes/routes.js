@@ -23,7 +23,8 @@ module.exports = function(app){
                                     owner_id:  responseArray[i].owner_id,
                                     artist: responseArray[i].artist,
                                     title: responseArray[i].title,
-                                    duration: responseArray[i].duration
+                                    duration: responseArray[i].duration,
+                                    url: responseArray[i].url
                                 };
                             }
                             res.json(songList);
