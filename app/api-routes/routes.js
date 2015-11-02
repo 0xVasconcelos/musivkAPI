@@ -11,7 +11,7 @@ module.exports = function(app){
         var songNameEnc = encodeURIComponent(req.params.data);
         var VKresponse;
         request({
-                    url: "https://api.vk.com/method/audio.search?q=" + songNameEnc + "&access_token=" + req.params.accessToken,
+                    url: "https://api.vk.com/method/audio.search?q=" + songNameEnc + "&v=5.37&access_token=" + req.params.accessToken,
                     json: true
                 }, function (error, response, body) {
                     if (!error && response.statusCode === 200) {
