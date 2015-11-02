@@ -15,17 +15,21 @@ module.exports = function(app){
                 }, function (error, response, body) {
                     if (!error && response.statusCode === 200) {
                         var songList = [];
-                        var responseArray = body.response.items;
-                        for(var i in responseArray){
-                            songList[i] = {
-                                id: responseArray[i].id,
-                                owner_id:  responseArray[i].owner_id,
-                                artist: responseArray[i].artist,
-                                title: responseArray[i].title,
-                                duration: responseArray[i].duration
-                            };
+                        try {
+                            var responseArray = body.response.items;
+                            for(var i in responseArray){
+                                songList[i] = {
+                                    id: responseArray[i].id,
+                                    owner_id:  responseArray[i].owner_id,
+                                    artist: responseArray[i].artist,
+                                    title: responseArray[i].title,
+                                    duration: responseArray[i].duration
+                                };
+                            }
+                            res.json(songList);
+                        } catch(err){
+                            res.send("NAO CLICA NA PORRA DO SEGUNBDO LINK FILHO DA PUTA");
                         }
-                        res.json(songList);
                     }
                 });
 
