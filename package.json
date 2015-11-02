@@ -25,6 +25,7 @@
   "homepage": "https://github.com/lucaslg26/musivkAPI#readme",
   "dependencies": {
     "express": "^4.13.3",
-    "mysql": "^2.9.0"
+    "mysql": "^2.9.0",
+    "request": "^2.65.0"
   }
 }
